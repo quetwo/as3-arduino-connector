@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension xmlns="http://ns.adobe.com/air/extension/2.5">
+	<id>com.quetwo.Arduino.ArduinoConnector</id>
+	<name>Arduino Connector</name>
+	<copyright>This work is licensed under Mozilla Public License Version 1.1, Copyright 2011</copyright>
+	<versionNumber>0.8.5</versionNumber>
+	<platforms>
+	<platform name="Windows-x86">
+		<applicationDeployment>
+			<nativeLibrary>libSerialANE.dll</nativeLibrary>
+			<initializer>initializer</initializer>
+			<finalizer>finalizer</finalizer>
+		</applicationDeployment>
+	</platform>
+	</platforms>
+</extension>
