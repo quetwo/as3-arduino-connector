@@ -55,7 +55,7 @@ void *pollForData()
 
   while(1)
     {
-      Sleep(1000);   // used only for testing.  I want managable loops, not crazy ones.
+      //Sleep(1000);   // used only for testing.  I want manageable loops, not crazy ones.
       incomingBufferSize = PollComport(comPort,incomingBuffer,4095);
       if (incomingBufferSize > 0)
         {
