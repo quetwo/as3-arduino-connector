@@ -52,10 +52,11 @@ void *pollForData()
 
   unsigned char incomingBuffer[4096];
   int incomingBufferSize = 0;
+  uint8_t prevCollection = 0;
 
   while(1)
     {
-      //Sleep(1000);   // used only for testing.  I want manageable loops, not crazy ones.
+      Sleep(10);   // used only for testing.  I want manageable loops, not crazy ones.
       incomingBufferSize = PollComport(comPort,incomingBuffer,4095);
       if (incomingBufferSize > 0)
         {
@@ -64,9 +65,14 @@ void *pollForData()
           bufferSize = bufferSize + incomingBufferSize;
           buffer[bufferSize] = 0;
           pthread_mutex_unlock( &safety);
+          prevCollection = 1;
+        }
+      else
+        {
+          prevCollection = 0;
         }
 
-      if ((bufferSize > 0) && (sentEvent == 0))
+      if ((sentEvent == 0) && (((prevCollection == 0) && (bufferSize > 0)) || (bufferSize > 1024)))
         {
           FREDispatchStatusEventAsync(dllContext, (uint8_t*) incomingBuffer, (const uint8_t*) "INFO");
           sentEvent = 1;
