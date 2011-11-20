@@ -58,7 +58,7 @@ package com.quetwo.Arduino
 			_ExtensionContext = ExtensionContext.createExtensionContext("com.quetwo.Arduino.ArduinoConnector", null);
 			_ExtensionContext.addEventListener(StatusEvent.STATUS, gotEvent);
 			createComPortResult = _ExtensionContext.call("setupPort", int(_comPort), int(_baud)) as Boolean;
-			trace("[ArduinoConnector] Open COM Port", _comPort.toString(), "=",createComPortResult);
+			trace("[ArduinoConnector] Opening COM port", _comPort.toString(), " success = ",createComPortResult);
 			_portOpen = createComPortResult;
 		}
 				
@@ -205,7 +205,6 @@ package com.quetwo.Arduino
 		 */
 		private function gotEvent(event:StatusEvent):void
 		{
-			trace("[ArduinoConnector] New data is in the buffer");
 			var e:ArduinoConnectorEvent = new ArduinoConnectorEvent(GOT_DATA);
 			dispatchEvent(e);
 		}
