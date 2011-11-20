@@ -21,6 +21,8 @@
 
 package com.quetwo.Arduino
 {
+	import com.quetwo.Arduino.ArduinoConnectorEvent;
+	
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
@@ -28,15 +30,15 @@ package com.quetwo.Arduino
 	import flash.external.ExtensionContext;
 	import flash.utils.ByteArray;
 	
-	[Event(name=GOT_DATA, type="com.quetwo.Arduino.ArduinoConnectorEvent")]
+	[Event(name="socketData", type="com.quetwo.Arduino.ArduinoConnectorEvent")]
 	public class ArduinoConnector extends EventDispatcher
 	{
 		
-		public  const GOT_DATA:String = "eventGotData";
 		private var   _ExtensionContext:ExtensionContext;
 		private var   _comPort:Number;
 		private var   _baud:Number;
 		private var   _portOpen:Boolean = false;
+		private var   _bytesAvailable:Number = 0;
 		
 		/**
 		 * 
@@ -48,7 +50,7 @@ package com.quetwo.Arduino
 		 * @param baud    This is the baud rate that the Arduino is connected at. 57600 is the default for the Firmata sketch.
 		 * 
 		 */
-		public function ArduinoConnector(comPort:String, baud:Number=57600, target:IEventDispatcher=null)
+		public function ArduinoConnector(comPort:String, baud:Number=57600)
 		{
 			var createComPortResult:Boolean;
 			
@@ -101,6 +103,7 @@ package com.quetwo.Arduino
 				trace("[ArduinoConnector] COM Port is not open failure");
 				return new Array();
 			}
+			_bytesAvailable = 0;
 			return _ExtensionContext.call("getBytesAsArray") as Array;
 		}
 		
@@ -119,6 +122,7 @@ package com.quetwo.Arduino
 				trace("[ArduinoConnector] COM Port is not open failure");
 				return '';
 			}
+			_bytesAvailable = 0;
 			return _ExtensionContext.call("getBytesAsString") as String;
 		}
 		
@@ -137,12 +141,51 @@ package com.quetwo.Arduino
 				trace("[ArduinoConnector] COM Port is not open failure");
 				return new ByteArray();
 			}
+			_bytesAvailable = 0;
 			var ba:ByteArray = new ByteArray();
 			_ExtensionContext.call("getBytesAsByteArray", ba);
 			ba.position = 0;
 			return ba;
 		}
 
+		/**
+		 *
+		 * Reads a single byte from the buffer.  This is a FIFO buffer, and the first element will be returned and removed from the buffer.
+		 * The events will not fire unless the buffer was emptied with this function.
+		 * 
+		 * @return A single 8-bit byte from the buffer.
+		 * 
+		 */
+		public function readByte():uint
+		{
+			if (!_portOpen)
+			{
+				trace("[ArduinoConnector] COM Port is not open failure");
+				return 0;
+			}
+			_bytesAvailable--;
+			return _ExtensionContext.call("getByte") as uint;
+		}
+		
+		
+		/**
+		 *
+		 * Writes a single byte to the serial port.
+		 *  
+		 * @param byte The byte that you wish to send.
+		 * @return TRUE if the sned was successful.  FALSE if there was an error sending the data. 
+		 * 
+		 */
+		public function writeByte(byte:uint):Boolean
+		{
+			if (!_portOpen)
+			{
+				trace("[ArduinoConnector] COM Port is not open failure");
+				return false;
+			}
+			return _ExtensionContext.call("sendByte", byte);
+		}
+			
 		
 		/**
 		 *
@@ -152,7 +195,7 @@ package com.quetwo.Arduino
 		 * @return  TRUE if the send was successful.  FALSE if there was an error sending the data.
 		 * 
 		 */
-		public function sendString(stringToSend:String):Boolean
+		public function writeString(stringToSend:String):Boolean
 		{
 			if (!_portOpen)
 			{
@@ -170,7 +213,7 @@ package com.quetwo.Arduino
 		 * @return  TRUE if the send was successful.  FALSE if there was an error sending the data.
 		 * 
 		 */
-		public function sendBytes(bytesToSend:ByteArray):Boolean
+		public function writeBytes(bytesToSend:ByteArray):Boolean
 		{
 			if (!_portOpen)
 			{
@@ -181,6 +224,18 @@ package com.quetwo.Arduino
 			return _ExtensionContext.call("sendByteArray", bytesToSend);
 		}
 		
+		/**
+		 *
+		 * This function pretends to flush the serial port buffer.  Data is sent out as it is sent to the various write* functions.  Don't use this,
+		 * you are only wasting CPU cycles and that makes Clu angry.  You don't want him angry.  He gets even.
+		 * 
+		 * This function is stubbed out purely to maintain compatibility with the flash.net.Socket class. 
+		 * 
+		 */
+		public function flush():void
+		{
+			// This is just stubbed out.  We always send out as soon as we are passed the data.
+		}
 		
 		/**
 		 *
@@ -196,6 +251,18 @@ package com.quetwo.Arduino
 		}
 		
 		/**
+		 *
+		 * Returns the number of bytes that are available in the buffer
+		 *  
+		 * @return Number of bytes available in the buffer. 
+		 * 
+		 */
+		public function get bytesAvailable():Number
+		{
+			return _bytesAvailable;
+		}
+		
+		/**
 		 * @private
 		 * 
 		 * This is the event that is fired by the DLL when there is new data in the buffer.
@@ -205,7 +272,8 @@ package com.quetwo.Arduino
 		 */
 		private function gotEvent(event:StatusEvent):void
 		{
-			var e:ArduinoConnectorEvent = new ArduinoConnectorEvent(GOT_DATA);
+			_bytesAvailable = _ExtensionContext.call("getAvailableBytes") as int;
+			var e:ArduinoConnectorEvent = new ArduinoConnectorEvent("socketData");
 			dispatchEvent(e);
 		}
 		

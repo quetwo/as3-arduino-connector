@@ -21,14 +21,18 @@
 
 package com.quetwo.Arduino
 {
-	import flash.events.Event;
+	import flash.events.ProgressEvent;
 	
-	public class ArduinoConnectorEvent extends Event
+	public class ArduinoConnectorEvent extends ProgressEvent
 	{
+		
+		public const SOCKET_DATA:String = "socketData";
+		public const PROGRESS:String = "progress";
 		
 		public function ArduinoConnectorEvent(type:String, bubbles:Boolean=false, cancelable:Boolean=false)
 		{
 			super(type, bubbles, cancelable);
 		}
+		
 	}
 }
