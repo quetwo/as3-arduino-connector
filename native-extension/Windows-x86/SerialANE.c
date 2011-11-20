@@ -74,7 +74,7 @@ void *pollForData()
 
       if ((sentEvent == 0) && (((prevCollection == 0) && (bufferSize > 0)) || (bufferSize > 1024)))
         {
-          FREDispatchStatusEventAsync(dllContext, (uint8_t*) incomingBuffer, (const uint8_t*) "INFO");
+          FREDispatchStatusEventAsync(dllContext, (uint8_t*) "bufferHasData", (const uint8_t*) "INFO");
           sentEvent = 1;
         }
     }
@@ -143,6 +143,54 @@ FREObject getBytesAsByteArray(FREContext ctx, void* funcData, uint32_t argc, FRE
   FREReleaseByteArray( &incomingBytes);
 
   FRENewObjectFromBool(1, &result);
+  return result;
+}
+
+FREObject getByte(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+{
+  FREObject result;
+
+  pthread_mutex_lock( &safety);
+    FRENewObjectFromUint32(buffer[0], &result);
+    memcpy(buffer,buffer+1,bufferSize-1);
+    bufferSize--;
+    if (bufferSize == 0)
+      {
+        sentEvent = 0;
+      }
+  pthread_mutex_unlock( &safety);
+
+  return result;
+}
+
+FREObject getAvailableBytes(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+{
+  FREObject result;
+  pthread_mutex_lock( &safety);
+    FRENewObjectFromInt32(bufferSize, &result);
+  pthread_mutex_unlock( &safety);
+  return result;
+}
+
+FREObject sendByte(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+{
+  FREObject result;
+
+  uint32_t dataToSend;
+  int sendResult = 0;
+
+  FREGetObjectAsUint32(argv[0], &dataToSend);
+
+  sendResult = SendByte(comPort, (unsigned char) dataToSend);
+
+  if (sendResult == -1)
+    {
+      FRENewObjectFromBool(0, &result);
+    }
+  else
+    {
+      FRENewObjectFromBool(1, &result);
+    }
   return result;
 }
 
@@ -219,7 +267,7 @@ FREObject setupPort(FREContext ctx, void* funcData, uint32_t argc, FREObject arg
 
 void contextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctions, const FRENamedFunction** functions)
 {
-  *numFunctions = 7;
+  *numFunctions = 10;
   FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * (*numFunctions));
 
   func[0].name = (const uint8_t*) "isSupported";
@@ -249,6 +297,18 @@ void contextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, u
   func[6].name = (const uint8_t*) "getBytesAsByteArray";
   func[6].functionData = NULL;
   func[6].function = &getBytesAsByteArray;
+
+  func[7].name = (const uint8_t*) "getByte";
+  func[7].functionData = NULL;
+  func[7].function = &getByte;
+
+  func[8].name = (const uint8_t*) "sendByte";
+  func[8].functionData = NULL;
+  func[8].function = &sendByte;
+
+  func[9].name = (const uint8_t*) "getAvailableBytes";
+  func[9].functionData = NULL;
+  func[9].function = &getAvailableBytes;
 
   *functions = func;
 
