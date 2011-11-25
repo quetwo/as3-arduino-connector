@@ -1,0 +1,111 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = 8DC2EF4F0486A6940098B216 /* SerialANE.framework */;
+		addToTargets = (
+			8DC2EF4F0486A6940098B216 /* SerialANE.framework */,
+		);
+		codeSenseManager = 768FF598148004F400A0EF77 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					301,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 343944335;
+			PBXWorkspaceStateSaveDate = 343944335;
+		};
+		sourceControlManager = 768FF597148004F400A0EF77 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	32DBCF5E0370ADEE00C91783 /* SerialANE_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {822, 430}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 150}";
+			sepNavWindowFrame = "{{61, 273}, {881, 558}}";
+		};
+	};
+	768FF597148004F400A0EF77 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	768FF598148004F400A0EF77 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	768FF5AF1480087700A0EF77 /* SerialANE.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {822, 468}}";
+			sepNavSelRange = "{992, 0}";
+			sepNavVisRange = "{23, 1035}";
+			sepNavWindowFrame = "{{176, 168}, {881, 558}}";
+		};
+	};
+	768FF6211480200C00A0EF77 /* SerialANE.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {822, 4420}}";
+			sepNavSelRange = "{1081, 0}";
+			sepNavVisRange = "{275, 871}";
+			sepNavWindowFrame = "{{199, 147}, {881, 558}}";
+		};
+	};
+	768FF6231480201900A0EF77 /* rs232.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {822, 4927}}";
+			sepNavSelRange = "{1448, 0}";
+			sepNavVisRange = "{794, 1154}";
+			sepNavWindowFrame = "{{222, 126}, {881, 558}}";
+		};
+	};
+	8DC2EF4F0486A6940098B216 /* SerialANE.framework */ = {
+		activeExec = 0;
+	};
+}
