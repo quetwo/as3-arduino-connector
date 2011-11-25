@@ -43,7 +43,11 @@ extern "C" {
 
 
 
-#ifdef __linux__
+#ifdef _WIN32
+
+#include <windows.h>
+
+#else
 
 #include <termios.h>
 #include <sys/ioctl.h>
@@ -52,10 +56,6 @@ extern "C" {
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <limits.h>
-
-#else
-
-#include <windows.h>
 
 #endif
 

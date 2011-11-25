@@ -46,6 +46,15 @@
 
   pthread_mutex_t safety = PTHREAD_MUTEX_INITIALIZER;
 
+void multiplatformSleep(int time)
+{
+#ifdef _WIN32
+  Sleep(time); // windows delay timer
+#else
+  usleep(time); // POSIX/Unix/Mac delay timer
+#endif
+}
+
 
 void *pollForData()
 {
@@ -56,7 +65,7 @@ void *pollForData()
 
   while(1)
     {
-      Sleep(10);   // used only for testing.  I want manageable loops, not crazy ones.
+      multiplatformSleep(10);   // used only for testing.  I want manageable loops, not crazy ones.
       incomingBufferSize = PollComport(comPort,incomingBuffer,4095);
       if (incomingBufferSize > 0)
         {
@@ -253,7 +262,7 @@ FREObject setupPort(FREContext ctx, void* funcData, uint32_t argc, FREObject arg
   comPortError = OpenComport(comPort,baud);
   if (comPortError == 0)
     {
-      Sleep(100);
+      multiplatformSleep(100);
       pthread_create(&ptrToThread, NULL, pollForData, NULL);
       FRENewObjectFromBool(1, &result);
     }
