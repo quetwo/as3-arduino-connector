@@ -211,21 +211,10 @@ int Cport[22],
 struct termios new_port_settings,
        old_port_settings[22];
 
-char comports[22][13]={"/dev/ttyS0","/dev/ttyS1","/dev/ttyS2","/dev/ttyS3","/dev/ttyS4","/dev/ttyS5",
-                       "/dev/ttyS6","/dev/ttyS7","/dev/ttyS8","/dev/ttyS9","/dev/ttyS10","/dev/ttyS11",
-                       "/dev/ttyS12","/dev/ttyS13","/dev/ttyS14","/dev/ttyS15","/dev/ttyUSB0",
-                       "/dev/ttyUSB1","/dev/ttyUSB2","/dev/ttyUSB3","/dev/ttyUSB4","/dev/ttyUSB5"};
-
-
-int OpenComport(int comport_number, int baudrate)
+int OpenComport(unsigned char *comPort, int baudrate)
 {
   int baudr;
-
-  if((comport_number>21)||(comport_number<0))
-  {
-    printf("illegal comport number\n");
-    return(1);
-  }
+  int comport_number=1;
 
   switch(baudrate)
   {
@@ -270,7 +259,7 @@ int OpenComport(int comport_number, int baudrate)
                    break;
   }
 
-  Cport[comport_number] = open(comports[comport_number], O_RDWR | O_NOCTTY | O_NDELAY);
+  Cport[comport_number] = open((char *) comPort, O_RDWR | O_NOCTTY | O_NDELAY);
   if(Cport[comport_number]==-1)
   {
     perror("unable to open comport ");

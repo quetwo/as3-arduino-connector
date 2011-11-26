@@ -41,7 +41,7 @@
   pthread_t ptrToThread;
   unsigned char buffer[4096];
   int bufferSize;
-  int32_t comPort;
+  unsigned char* comPort;
   int baud;
   int sentEvent;
 
@@ -52,7 +52,7 @@ void multiplatformSleep(int time)
 #ifdef _WIN32
   Sleep(time); // windows delay timer
 #else
-  usleep(time); // POSIX/Unix/Mac delay timer
+  usleep(time * 1000); // POSIX/Unix/Mac delay timer
 #endif
 }
 
@@ -67,7 +67,7 @@ void *pollForData()
   while(1)
     {
       multiplatformSleep(10);   // used only for testing.  I want manageable loops, not crazy ones.
-      incomingBufferSize = PollComport(comPort,incomingBuffer,4095);
+      incomingBufferSize = PollComport(1,incomingBuffer,4095);
       if (incomingBufferSize > 0)
         {
           pthread_mutex_lock( &safety );
@@ -191,7 +191,7 @@ FREObject sendByte(FREContext ctx, void* funcData, uint32_t argc, FREObject argv
 
   FREGetObjectAsUint32(argv[0], &dataToSend);
 
-  sendResult = SendByte(comPort, (unsigned char) dataToSend);
+  sendResult = SendByte(1, (unsigned char) dataToSend);
 
   if (sendResult == -1)
     {
@@ -214,7 +214,7 @@ FREObject sendString(FREContext ctx, void* funcData, uint32_t argc, FREObject ar
 
   FREGetObjectAsUTF8(argv[0], &lengthToSend, &dataToSend);
 
-  sendResult = SendBuf(comPort, (unsigned char *)dataToSend, lengthToSend);
+  sendResult = SendBuf(1, (unsigned char *)dataToSend, lengthToSend);
 
   if (sendResult == -1)
     {
@@ -235,7 +235,7 @@ FREObject sendByteArray(FREContext ctx, void* funcData, uint32_t argc, FREObject
 
   FREAcquireByteArray(argv[0], &dataToSend);
 
-  sendResult = SendBuf(comPort, (unsigned char *)&dataToSend.bytes, dataToSend.length);
+  sendResult = SendBuf(1, (unsigned char *)&dataToSend.bytes, dataToSend.length);
 
   FREReleaseByteArray(argv[0]);
 
@@ -254,13 +254,18 @@ FREObject setupPort(FREContext ctx, void* funcData, uint32_t argc, FREObject arg
 {
   FREObject result;
   int comPortError = 0;
+  uint comLength = 0;
 
-  FREGetObjectAsInt32(argv[0], &comPort);
+  const uint8_t *portToOpen;	
+	
+  FREGetObjectAsUTF8(argv[0], &comLength, &portToOpen);
   FREGetObjectAsInt32(argv[1], &baud);
 
+  memcpy(comPort, portToOpen, comLength);	
+  
   bufferSize = 0;
 
-  comPortError = OpenComport(comPort,baud);
+  comPortError = OpenComport((unsigned char *) comPort,baud);
   if (comPortError == 0)
     {
       multiplatformSleep(100);
@@ -329,7 +334,7 @@ void contextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, u
 void contextFinalizer(FREContext ctx)
 {
   pthread_cancel(ptrToThread);
-  CloseComport(comPort);
+  CloseComport(1);
   return;
 }
 
