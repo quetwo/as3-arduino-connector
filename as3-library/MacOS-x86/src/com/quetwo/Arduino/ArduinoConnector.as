@@ -69,7 +69,7 @@ package com.quetwo.Arduino
 			_comPort = comPort;
 			_baud = baud;
 			createComPortResult = _ExtensionContext.call("setupPort", _comPort, _baud) as Boolean;
-			trace("[ArduinoConnector] Opening COM port", _comPort.toString(), " success = ",createComPortResult);
+			trace("[ArduinoConnector] Opening COM port", _comPort, " success = ",createComPortResult);
 			_portOpen = createComPortResult;
 			return createComPortResult;
 		}
