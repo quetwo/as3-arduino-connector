@@ -1,780 +1,0 @@
-TSerialANE.framework
-v7
-r0
-t344098709.827742
-cCheck dependencies
-cSymLink /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/Current A
-cSymLink /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Resources Versions/Current/Resources
-cSymLink /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/SerialANE Versions/Current/SerialANE
-cProcessInfoPlistFile /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/Info.plist Info.plist
-cCopyStringsFile /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-cProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-fvkesaijbplkszeeiebzxljiwsrr/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
-cCompileC build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE.o /Users/quetwo/Documents/SerialANE/SerialANE.c normal i386 c com.apple.compilers.gcc.4_2
-cCompileC build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/rs232.o /Users/quetwo/Documents/SerialANE/rs232.c normal i386 c com.apple.compilers.gcc.4_2
-cLd /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE normal i386
-cGenerateDSYMFile /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework.dSYM /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE
-cTouch /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework
-
-N/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Adobe AIR
-c000000004EB7594B0000000001477B9C
-t1320638795
-s21461916
-
-N/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Headers/Adobe AIR.h
-c000000004EB759450000000000000314
-t1320638789
-s788
-i<Adobe AIR/FlashRuntimeExtensions.h>
-
-N/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Headers/FlashRuntimeExtensions.h
-c000000004EB759450000000000004D52
-t1320638789
-s19794
-i<stdint.h>
-
-N/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac/Adobe AIR.framework/Adobe AIR
-c000000004EC4C6AF00000000013FCB30
-t1321518767
-s20958000
-
-N/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac/Adobe AIR.framework/Headers/Adobe AIR.h
-c000000004EC4C6AA0000000000000314
-t1321518762
-s788
-i<Adobe AIR/FlashRuntimeExtensions.h>
-
-N/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac/Adobe AIR.framework/Headers/FlashRuntimeExtensions.h
-c000000004EC4C6AA0000000000004D54
-t1321518762
-s19796
-i<stdint.h>
-
-N/Developer/SDKs/MacOSX10.5.sdk
-c000000004AB44D2500000000000000EE
-t1253330213
-s238
-
-N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/fcntl.h
-c0000000047BA993000000000000003EA
-t1203411248
-s1002
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/pthread.h
-c0000000047BA9932000000000000380F
-t1203411250
-s14351
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
-c0000000047BA99310000000000003D1D
-t1203411249
-s15645
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdlib.h
-c0000000047BA99310000000000002A79
-t1203411249
-s10873
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/string.h
-c0000000047BA99320000000000001731
-t1203411250
-s5937
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/ioctl.h
-c0000000047E883CF00000000000011D1
-t1206420431
-s4561
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/stat.h
-c0000000047E883D100000000000047CE
-t1206420433
-s18382
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/types.h
-c0000000047E883D2000000000000290F
-t1206420434
-s10511
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/termios.h
-c0000000047BA993000000000000004D4
-t1203411248
-s1236
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/include/unistd.h
-c0000000047BA993200000000000053FF
-t1203411250
-s21503
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
-c000000004A11EAF10000000000000C7E
-t1242688241
-s3198
-
-N/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h
-c000000004A11EAF1000000000000190C
-t1242688241
-s6412
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004ABBF0FD00000000000000EE
-t1253830909
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/fcntl.h
-c000000004A5C14A600000000000003EA
-t1247548582
-s1002
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h
-c000000004A5C14A700000000000038F0
-t1247548583
-s14576
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
-c000000004A5C14A70000000000004174
-t1247548583
-s16756
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
-c000000004A5C14A70000000000002DF5
-t1247548583
-s11765
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
-c000000004A5C14A70000000000001731
-t1247548583
-s5937
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/ioctl.h
-c000000004A73D651000000000000116C
-t1249105489
-s4460
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/stat.h
-c000000004A73D6550000000000004A1D
-t1249105493
-s18973
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
-c000000004A73D6550000000000002905
-t1249105493
-s10501
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/termios.h
-c000000004A5C14A600000000000004D4
-t1247548582
-s1236
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
-c000000004A5C14A7000000000000563E
-t1247548583
-s22078
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
-c000000004A11EB240000000000000C7E
-t1242688292
-s3198
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h
-c000000004A11EB24000000000000190C
-t1242688292
-s6412
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004A1F2D63000000000000A5E0
-t1243557219
-s42464
-
-N/Users/quetwo/Documents/SerialANE/English.lproj/InfoPlist.strings
-c000000004ECFCD560000000000000030
-t1322241366
-s48
-
-N/Users/quetwo/Documents/SerialANE/SerialANE.c
-c000000004ED2500E000000000000223D
-t1322405902
-s8765
-i"SerialANE.h"
-i"stdio.h"
-i"pthread.h"
-i"stdlib.h"
-i"stdint.h"
-i"String.h"
-i"rs232.h"
-i"FlashRuntimeExtensions.h"
-i<Adobe AIR/Adobe AIR.h>
-
-N/Users/quetwo/Documents/SerialANE/SerialANE.h
-c000000004ECFD34C0000000000000422
-t1322242892
-s1058
-i<Adobe AIR/Adobe AIR.h>
-
-N/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch
-c000000004ECFCD560000000000000096
-t1322241366
-s150
-i<Cocoa/Cocoa.h>
-
-N/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework
-t1322405909
-s170
-
-N/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework.dSYM
-t1322405909
-s102
-
-N/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Resources
-t3
-s26
-
-N/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/SerialANE
-t3
-s26
-
-N/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/English.lproj/InfoPlist.strings
-t1322405909
-s92
-
-N/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/Info.plist
-t1322405909
-s720
-
-N/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE
-t1322405909
-s18620
-
-N/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/Current
-t3
-s1
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE
-t1322243566
-s19420
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE.LinkFileList
-c000000004ED2501500000000000000F0
-t1322405909
-s240
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE.o
-t1322405909
-s15112
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/rs232.o
-t1322405909
-s6956
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE
-t2
-s0
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE.LinkFileList
-c000000004ECFD55C00000000000000EE
-t1322243420
-s238
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE.o
-t1322243566
-s15700
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/rs232.o
-t1322243566
-s7672
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE
-t2
-s0
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE.LinkFileList
-c000000004ECFD55C00000000000000F4
-t1322243420
-s244
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE.o
-t1322243422
-s18504
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/rs232.o
-t1322243422
-s9444
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/StaticAnalyzer/normal/i386/SerialANE.plist
-t1322251564
-s275
-
-N/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/StaticAnalyzer/normal/i386/rs232.plist
-t1322251564
-s275
-
-N/Users/quetwo/Documents/SerialANE/rs232.c
-c000000004ED24F8B00000000000027A9
-t1322405771
-s10153
-i"rs232.h"
-
-N/Users/quetwo/Documents/SerialANE/rs232.h
-c000000004ED24F97000000000000070C
-t1322405783
-s1804
-i<stdio.h>
-i<string.h>
-i<windows.h>
-i<termios.h>
-i<sys/ioctl.h>
-i<unistd.h>
-i<fcntl.h>
-i<sys/types.h>
-i<sys/stat.h>
-i<limits.h>
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-acxozgsgcarlqfbagytukuxdigbu/SerialANE_Prefix.pch.pth
-t1322248702
-s55304
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-azybmrckhntbptdfrijbpnvkspys/SerialANE_Prefix.pch.gch
-t1322372492
-s2191728
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-bhrattglsybfrxfrsvfbukrciter/SerialANE_Prefix.pch.gch
-t2
-s0
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dhouvpiemftqkdekcxslwwtyliyh/SerialANE_Prefix.pch.gch
-t2
-s0
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dpvpozlpclhkprhcnnvafnwurwxr/SerialANE_Prefix.pch.gch
-t1322243421
-s2208112
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dyugocxszpqrybdirpjfbtdlmwvr/SerialANE_Prefix.pch.gch
-t1322243421
-s2191728
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-efwkvrqnotblfofunkpclmcbhvpf/SerialANE_Prefix.pch.gch
-t1322374509
-s2191728
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-emtvsdkqpeqabhalxjndvkytvfbk/SerialANE_Prefix.pch.gch
-t1322243565
-s1954160
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-erwcteucreqrjcanmvlakgtsjeou/SerialANE_Prefix.pch.gch
-t1322243421
-s1954160
-
-N/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-fvkesaijbplkszeeiebzxljiwsrr/SerialANE_Prefix.pch.gch
-t1322405909
-s2191728
-
-NInfo.plist
-c000000004ECFCD560000000000000357
-t1322241366
-s855
-
-CAnalyze /Users/quetwo/Documents/SerialANE/SerialANE.c
-s343944364.377051
-e343944364.477251
-r1
-xAnalyze
-x/Users/quetwo/Documents/SerialANE/SerialANE.c
-lSLF07#2@53"Analyze /Users/quetwo/Documents/SerialANE/SerialANE.c343944364#343944364#0(0"0(0#0#45"/Users/quetwo/Documents/SerialANE/SerialANE.c4300885448#1622"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -include /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-acxozgsgcarlqfbagytukuxdigbu/SerialANE_Prefix.pch --analyze /Users/quetwo/Documents/SerialANE/SerialANE.c -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/StaticAnalyzer/normal/i386/SerialANE.plist0#
-
-CAnalyze /Users/quetwo/Documents/SerialANE/rs232.c
-s343944364.378210
-e343944364.427058
-r1
-xAnalyze
-x/Users/quetwo/Documents/SerialANE/rs232.c
-lSLF07#2@49"Analyze /Users/quetwo/Documents/SerialANE/rs232.c343944364#343944364#0(0"0(0#0#41"/Users/quetwo/Documents/SerialANE/rs232.c4300885448#1614"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -include /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-acxozgsgcarlqfbagytukuxdigbu/SerialANE_Prefix.pch --analyze /Users/quetwo/Documents/SerialANE/rs232.c -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/StaticAnalyzer/normal/i386/rs232.plist0#
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies344098709#344098709#0(0"0(0#1#0"4300885448#0"0#
-
-CCompileC build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE.o /Users/quetwo/Documents/SerialANE/SerialANE.c normal i386 c com.apple.compilers.gcc.4_2
-s344098709.569763
-e344098709.754179
-r1
-xCompileC
-xbuild/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE.o
-x/Users/quetwo/Documents/SerialANE/SerialANE.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@53"Compile /Users/quetwo/Documents/SerialANE/SerialANE.c344098709#344098709#0(0"0(0#0#45"/Users/quetwo/Documents/SerialANE/SerialANE.c4300885448#1607"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -fvisibility=hidden -include /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-fvkesaijbplkszeeiebzxljiwsrr/SerialANE_Prefix.pch -c /Users/quetwo/Documents/SerialANE/SerialANE.c -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE.o0#
-
-CCompileC build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/rs232.o /Users/quetwo/Documents/SerialANE/rs232.c normal i386 c com.apple.compilers.gcc.4_2
-s344098709.570762
-e344098709.753935
-r1
-xCompileC
-xbuild/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/rs232.o
-x/Users/quetwo/Documents/SerialANE/rs232.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@49"Compile /Users/quetwo/Documents/SerialANE/rs232.c344098709#344098709#0(0"0(0#0#41"/Users/quetwo/Documents/SerialANE/rs232.c4300885448#1599"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -fvisibility=hidden -include /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-fvkesaijbplkszeeiebzxljiwsrr/SerialANE_Prefix.pch -c /Users/quetwo/Documents/SerialANE/rs232.c -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/rs232.o0#
-
-CCompileC build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE.o /Users/quetwo/Documents/SerialANE/SerialANE.c normal ppc c com.apple.compilers.gcc.4_2
-s343936366.010392
-e343936366.227269
-r1
-xCompileC
-xbuild/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE.o
-x/Users/quetwo/Documents/SerialANE/SerialANE.c
-xnormal
-xppc
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@53"Compile /Users/quetwo/Documents/SerialANE/SerialANE.c343936366#343936366#0(0"0(0#0#45"/Users/quetwo/Documents/SerialANE/SerialANE.c4300885448#1562"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/ppc -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -include /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-emtvsdkqpeqabhalxjndvkytvfbk/SerialANE_Prefix.pch -c /Users/quetwo/Documents/SerialANE/SerialANE.c -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE.o0#
-
-CCompileC build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/rs232.o /Users/quetwo/Documents/SerialANE/rs232.c normal ppc c com.apple.compilers.gcc.4_2
-s343936366.185367
-e343936366.270719
-r1
-xCompileC
-xbuild/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/rs232.o
-x/Users/quetwo/Documents/SerialANE/rs232.c
-xnormal
-xppc
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@49"Compile /Users/quetwo/Documents/SerialANE/rs232.c343936366#343936366#0(0"0(0#0#41"/Users/quetwo/Documents/SerialANE/rs232.c4300885448#1554"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/ppc -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -include /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-emtvsdkqpeqabhalxjndvkytvfbk/SerialANE_Prefix.pch -c /Users/quetwo/Documents/SerialANE/rs232.c -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/rs232.o0#
-
-CCompileC build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE.o /Users/quetwo/Documents/SerialANE/SerialANE.c normal x86_64 c com.apple.compilers.gcc.4_2
-s343936222.093918
-e343936222.500914
-r1
-xCompileC
-xbuild/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE.o
-x/Users/quetwo/Documents/SerialANE/SerialANE.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@53"Compile /Users/quetwo/Documents/SerialANE/SerialANE.c343936222#343936222#0(0"0(0#0#45"/Users/quetwo/Documents/SerialANE/SerialANE.c4300885448#1574"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/x86_64 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -include /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dpvpozlpclhkprhcnnvafnwurwxr/SerialANE_Prefix.pch -c /Users/quetwo/Documents/SerialANE/SerialANE.c -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE.o0#
-
-CCompileC build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/rs232.o /Users/quetwo/Documents/SerialANE/rs232.c normal x86_64 c com.apple.compilers.gcc.4_2
-s343936222.095386
-e343936222.433747
-r1
-xCompileC
-xbuild/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/rs232.o
-x/Users/quetwo/Documents/SerialANE/rs232.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/quetwo/Documents/SerialANE/rs232.c: In function 'PollComport':
-o/Users/quetwo/Documents/SerialANE/rs232.c:141: warning: comparison is always false due to limited range of data type
-lSLF07#2@49"Compile /Users/quetwo/Documents/SerialANE/rs232.c343936222#343936222#0(187"/Users/quetwo/Documents/SerialANE/rs232.c: In function 'PollComport':/Users/quetwo/Documents/SerialANE/rs232.c:141: warning: comparison is always false due to limited range of data type1(22@60"Comparison is always false due to limited range of data type343936222#70#117#0(6@41"/Users/quetwo/Documents/SerialANE/rs232.c343936018#141#0#141#0#0"0(0#0#41"/Users/quetwo/Documents/SerialANE/rs232.c4300885448#1566"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/x86_64 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -include /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dpvpozlpclhkprhcnnvafnwurwxr/SerialANE_Prefix.pch -c /Users/quetwo/Documents/SerialANE/rs232.c -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/rs232.o0#
-
-CCopyStringsFile /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s344098709.394321
-e344098709.495823
-r1
-xCopyStringsFile
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings344098709#344098709#0(0"0(0#0#65"/Users/quetwo/Documents/SerialANE/English.lproj/InfoPlist.strings4300885448#367"    cd /Users/quetwo/Documents/SerialANE    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/English.lproj0#
-
-CCreateUniversalBinary /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE normal "i386 ppc"
-r0
-
-CCreateUniversalBinary /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE normal "x86_64 i386 ppc"
-r0
-
-CGenerateDSYMFile /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework.dSYM /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE
-s344098709.813069
-e344098709.824762
-r1
-xGenerateDSYMFile
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework.dSYM
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE
-lSLF07#2@110"GenerateDSYMFile build/Release/SerialANE.framework.dSYM build/Release/SerialANE.framework/Versions/A/SerialANE344098709#344098709#0(0"0(0#0#88"/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE4300885448#238"    cd /Users/quetwo/Documents/SerialANE    /Developer/usr/bin/dsymutil /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE -o /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework.dSYM0#
-
-CLd /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE normal i386
-s344098709.754241
-e344098709.812958
-r1
-xLd
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE
-xnormal
-xi386
-lSLF07#2@93"Link /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE344098709#344098709#0(0"0(0#0#0"4300885448#1019"    cd /Users/quetwo/Documents/SerialANE    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/quetwo/Documents/SerialANE/build/Release "-L/Developer/SDKs/MacOSX10.5.sdk/Library/Frameworks/Adobe AIR.framework/Versions/1.0" -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac" -filelist /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE.LinkFileList -install_name /Users/quetwo/Library/Frameworks/SerialANE.framework/Versions/A/SerialANE -Xlinker -rpath -Xlinker "/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac" -mmacosx-version-min=10.5 -flat_namespace -weak_framework "Adobe AIR" -framework Cocoa -framework "Adobe AIR" -single_module -compatibility_version 1 -current_version 1 -o /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/SerialANE0#
-
-CLd /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE normal i386
-s343936366.050828
-e343936366.185259
-r1
-xLd
-x/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE
-xnormal
-xi386
-lSLF07#2@124"Link /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE343936366#343936366#0(0"0(0#0#0"4300885448#826"    cd /Users/quetwo/Documents/SerialANE    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch i386 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/quetwo/Documents/SerialANE/build/Release -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -filelist /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE.LinkFileList -install_name /Users/quetwo/Library/Frameworks/SerialANE.framework/Versions/A/SerialANE -mmacosx-version-min=10.5 -framework Cocoa -framework "Adobe AIR" -single_module -compatibility_version 1 -current_version 1 -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/i386/SerialANE0#
-
-CLd /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE normal ppc
-s343936366.270825
-e343936366.381361
-r0
-xLd
-x/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE
-xnormal
-xppc
-old: warning: in /Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Adobe AIR, file is not of required architecture
-oUndefined symbols:
-o  "_FRENewObjectFromUTF8", referenced from:
-o      _getBytesAsString in SerialANE.o
-o      _getBytesAsArray in SerialANE.o
-o  "_FREGetObjectAsUint32", referenced from:
-o      _sendByte in SerialANE.o
-o  "_FRESetArrayLength", referenced from:
-o      _getBytesAsArray in SerialANE.o
-o  "_FREDispatchStatusEventAsync", referenced from:
-o      _pollForData in SerialANE.o
-o  "_FREAcquireByteArray", referenced from:
-o      _sendByteArray in SerialANE.o
-o      _getBytesAsByteArray in SerialANE.o
-o  "_FRESetArrayElementAt", referenced from:
-o      _getBytesAsArray in SerialANE.o
-o  "_FREReleaseByteArray", referenced from:
-o      _sendByteArray in SerialANE.o
-o      _getBytesAsByteArray in SerialANE.o
-o  "_FRENewObjectFromUint32", referenced from:
-o      _getByte in SerialANE.o
-o  "_FRENewObjectFromBool", referenced from:
-o      _setupPort in SerialANE.o
-o      _isSupported in SerialANE.o
-o      _sendByteArray in SerialANE.o
-o      _sendString in SerialANE.o
-o      _sendByte in SerialANE.o
-o      _getBytesAsByteArray in SerialANE.o
-o  "_FRENewObjectFromInt32", referenced from:
-o      _getAvailableBytes in SerialANE.o
-o  "_FREGetObjectAsInt32", referenced from:
-o      _setupPort in SerialANE.o
-o      _setupPort in SerialANE.o
-o  "_FREGetObjectAsUTF8", referenced from:
-o      _sendString in SerialANE.o
-o  "_FRENewObject", referenced from:
-o      _getBytesAsArray in SerialANE.o
-old: symbol(s) not found
-ocollect2: ld returned 1 exit status
-lSLF07#2@123"Link /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE343936366#343936366#0(1582"ld: warning: in /Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Adobe AIR, file is not of required architectureUndefined symbols:  "_FRENewObjectFromUTF8", referenced from:      _getBytesAsString in SerialANE.o      _getBytesAsArray in SerialANE.o  "_FREGetObjectAsUint32", referenced from:      _sendByte in SerialANE.o  "_FRESetArrayLength", referenced from:      _getBytesAsArray in SerialANE.o  "_FREDispatchStatusEventAsync", referenced from:      _pollForData in SerialANE.o  "_FREAcquireByteArray", referenced from:      _sendByteArray in SerialANE.o      _getBytesAsByteArray in SerialANE.o  "_FRESetArrayElementAt", referenced from:      _getBytesAsArray in SerialANE.o  "_FREReleaseByteArray", referenced from:      _sendByteArray in SerialANE.o      _getBytesAsByteArray in SerialANE.o  "_FRENewObjectFromUint32", referenced from:      _getByte in SerialANE.o  "_FRENewObjectFromBool", referenced from:      _setupPort in SerialANE.o      _isSupported in SerialANE.o      _sendByteArray in SerialANE.o      _sendString in SerialANE.o      _sendByte in SerialANE.o      _getBytesAsByteArray in SerialANE.o  "_FRENewObjectFromInt32", referenced from:      _getAvailableBytes in SerialANE.o  "_FREGetObjectAsInt32", referenced from:      _setupPort in SerialANE.o      _setupPort in SerialANE.o  "_FREGetObjectAsUTF8", referenced from:      _sendString in SerialANE.o  "_FRENewObject", referenced from:      _getBytesAsArray in SerialANE.old: symbol(s) not foundcollect2: ld returned 1 exit status38(22@136"In /Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Adobe AIR, file is not of required architecture343936366#0#150#0(6@0"343936366#0#0#0#0#0"0(4@41""_FRENewObjectFromUTF8", referenced from:343936366#169#44#0(6@0"343936366#0#0#0#0#0"0(13@32"_getBytesAsString in SerialANE.o343936366#213#39#0(6@0"343936366#0#0#0#0#0"0(13@31"_getBytesAsArray in SerialANE.o343936366#252#38#0(6@0"343936366#0#0#0#0#0"0(4@41""_FREGetObjectAsUint32", referenced from:343936366#290#44#0(6@0"343936366#0#0#0#0#0"0(13@24"_sendByte in SerialANE.o343936366#334#31#0(6@0"343936366#0#0#0#0#0"0(4@38""_FRESetArrayLength", referenced from:343936366#365#41#0(6@0"343936366#0#0#0#0#0"0(13@31"_getBytesAsArray in SerialANE.o343936366#406#38#0(6@0"343936366#0#0#0#0#0"0(4@48""_FREDispatchStatusEventAsync", referenced from:343936366#444#51#0(6@0"343936366#0#0#0#0#0"0(13@27"_pollForData in SerialANE.o343936366#495#34#0(6@0"343936366#0#0#0#0#0"0(4@40""_FREAcquireByteArray", referenced from:343936366#529#43#0(6@0"343936366#0#0#0#0#0"0(13@29"_sendByteArray in SerialANE.o343936366#572#36#0(6@0"343936366#0#0#0#0#0"0(13@35"_getBytesAsByteArray in SerialANE.o343936366#608#42#0(6@0"343936366#0#0#0#0#0"0(4@41""_FRESetArrayElementAt", referenced from:343936366#650#44#0(6@0"343936366#0#0#0#0#0"0(13@31"_getBytesAsArray in SerialANE.o343936366#694#38#0(6@0"343936366#0#0#0#0#0"0(4@40""_FREReleaseByteArray", referenced from:343936366#732#43#0(6@0"343936366#0#0#0#0#0"0(13@29"_sendByteArray in SerialANE.o343936366#775#36#0(6@0"343936366#0#0#0#0#0"0(13@35"_getBytesAsByteArray in SerialANE.o343936366#811#42#0(6@0"343936366#0#0#0#0#0"0(4@43""_FRENewObjectFromUint32", referenced from:343936366#853#46#0(6@0"343936366#0#0#0#0#0"0(13@23"_getByte in SerialANE.o343936366#899#30#0(6@0"343936366#0#0#0#0#0"0(4@41""_FRENewObjectFromBool", referenced from:343936366#929#44#0(6@0"343936366#0#0#0#0#0"0(13@25"_setupPort in SerialANE.o343936366#973#32#0(6@0"343936366#0#0#0#0#0"0(13@27"_isSupported in SerialANE.o343936366#1005#34#0(6@0"343936366#0#0#0#0#0"0(13@29"_sendByteArray in SerialANE.o343936366#1039#36#0(6@0"343936366#0#0#0#0#0"0(13@26"_sendString in SerialANE.o343936366#1075#33#0(6@0"343936366#0#0#0#0#0"0(13@24"_sendByte in SerialANE.o343936366#1108#31#0(6@0"343936366#0#0#0#0#0"0(13@35"_getBytesAsByteArray in SerialANE.o343936366#1139#42#0(6@0"343936366#0#0#0#0#0"0(4@42""_FRENewObjectFromInt32", referenced from:343936366#1181#45#0(6@0"343936366#0#0#0#0#0"0(13@33"_getAvailableBytes in SerialANE.o343936366#1226#40#0(6@0"343936366#0#0#0#0#0"0(4@40""_FREGetObjectAsInt32", referenced from:343936366#1266#43#0(6@0"343936366#0#0#0#0#0"0(13@25"_setupPort in SerialANE.o343936366#1309#32#0(6@0"343936366#0#0#0#0#0"0(13@25"_setupPort in SerialANE.o343936366#1341#32#0(6@0"343936366#0#0#0#0#0"0(4@39""_FREGetObjectAsUTF8", referenced from:343936366#1373#42#0(6@0"343936366#0#0#0#0#0"0(13@26"_sendString in SerialANE.o343936366#1415#33#0(6@0"343936366#0#0#0#0#0"0(4@33""_FRENewObject", referenced from:343936366#1448#36#0(6@0"343936366#0#0#0#0#0"0(13@31"_getBytesAsArray in SerialANE.o343936366#1484#38#0(6@0"343936366#0#0#0#0#0"0(13@19"Symbol(s) not found343936366#1522#24#0(6@0"343936366#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status343936366#1546#36#0(6@0"343936366#0#0#0#0#0"0(0#0#0"4300885448#823"    cd /Users/quetwo/Documents/SerialANE    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch ppc -dynamiclib -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/quetwo/Documents/SerialANE/build/Release -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -filelist /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE.LinkFileList -install_name /Users/quetwo/Library/Frameworks/SerialANE.framework/Versions/A/SerialANE -mmacosx-version-min=10.5 -framework Cocoa -framework "Adobe AIR" -single_module -compatibility_version 1 -current_version 1 -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/ppc/SerialANE1#
-
-CLd /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE normal x86_64
-s343936222.501054
-e343936222.603189
-r0
-xLd
-x/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE
-xnormal
-xx86_64
-old: warning: in /Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Adobe AIR, file is not of required architecture
-oUndefined symbols:
-o  "_FRENewObjectFromUTF8", referenced from:
-o      _getBytesAsString in SerialANE.o
-o      _getBytesAsArray in SerialANE.o
-o  "_FREGetObjectAsUint32", referenced from:
-o      _sendByte in SerialANE.o
-o  "_FRESetArrayLength", referenced from:
-o      _getBytesAsArray in SerialANE.o
-o  "_FREDispatchStatusEventAsync", referenced from:
-o      _pollForData in SerialANE.o
-o  "_FREAcquireByteArray", referenced from:
-o      _sendByteArray in SerialANE.o
-o      _getBytesAsByteArray in SerialANE.o
-o  "_FRESetArrayElementAt", referenced from:
-o      _getBytesAsArray in SerialANE.o
-o  "_FREReleaseByteArray", referenced from:
-o      _sendByteArray in SerialANE.o
-o      _getBytesAsByteArray in SerialANE.o
-o  "_FRENewObjectFromUint32", referenced from:
-o      _getByte in SerialANE.o
-o  "_FRENewObjectFromBool", referenced from:
-o      _setupPort in SerialANE.o
-o      _isSupported in SerialANE.o
-o      _sendByteArray in SerialANE.o
-o      _sendString in SerialANE.o
-o      _sendByte in SerialANE.o
-o      _getBytesAsByteArray in SerialANE.o
-o  "_FRENewObjectFromInt32", referenced from:
-o      _getAvailableBytes in SerialANE.o
-o  "_FREGetObjectAsInt32", referenced from:
-o      _setupPort in SerialANE.o
-o      _setupPort in SerialANE.o
-o  "_FREGetObjectAsUTF8", referenced from:
-o      _sendString in SerialANE.o
-o  "_FRENewObject", referenced from:
-o      _getBytesAsArray in SerialANE.o
-old: symbol(s) not found
-ocollect2: ld returned 1 exit status
-lSLF07#2@126"Link /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE343936222#343936222#0(1582"ld: warning: in /Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Adobe AIR, file is not of required architectureUndefined symbols:  "_FRENewObjectFromUTF8", referenced from:      _getBytesAsString in SerialANE.o      _getBytesAsArray in SerialANE.o  "_FREGetObjectAsUint32", referenced from:      _sendByte in SerialANE.o  "_FRESetArrayLength", referenced from:      _getBytesAsArray in SerialANE.o  "_FREDispatchStatusEventAsync", referenced from:      _pollForData in SerialANE.o  "_FREAcquireByteArray", referenced from:      _sendByteArray in SerialANE.o      _getBytesAsByteArray in SerialANE.o  "_FRESetArrayElementAt", referenced from:      _getBytesAsArray in SerialANE.o  "_FREReleaseByteArray", referenced from:      _sendByteArray in SerialANE.o      _getBytesAsByteArray in SerialANE.o  "_FRENewObjectFromUint32", referenced from:      _getByte in SerialANE.o  "_FRENewObjectFromBool", referenced from:      _setupPort in SerialANE.o      _isSupported in SerialANE.o      _sendByteArray in SerialANE.o      _sendString in SerialANE.o      _sendByte in SerialANE.o      _getBytesAsByteArray in SerialANE.o  "_FRENewObjectFromInt32", referenced from:      _getAvailableBytes in SerialANE.o  "_FREGetObjectAsInt32", referenced from:      _setupPort in SerialANE.o      _setupPort in SerialANE.o  "_FREGetObjectAsUTF8", referenced from:      _sendString in SerialANE.o  "_FRENewObject", referenced from:      _getBytesAsArray in SerialANE.old: symbol(s) not foundcollect2: ld returned 1 exit status38(22@136"In /Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac/Adobe AIR.framework/Adobe AIR, file is not of required architecture343936222#0#150#0(6@0"343936222#0#0#0#0#0"0(4@41""_FRENewObjectFromUTF8", referenced from:343936222#169#44#0(6@0"343936222#0#0#0#0#0"0(13@32"_getBytesAsString in SerialANE.o343936222#213#39#0(6@0"343936222#0#0#0#0#0"0(13@31"_getBytesAsArray in SerialANE.o343936222#252#38#0(6@0"343936222#0#0#0#0#0"0(4@41""_FREGetObjectAsUint32", referenced from:343936222#290#44#0(6@0"343936222#0#0#0#0#0"0(13@24"_sendByte in SerialANE.o343936222#334#31#0(6@0"343936222#0#0#0#0#0"0(4@38""_FRESetArrayLength", referenced from:343936222#365#41#0(6@0"343936222#0#0#0#0#0"0(13@31"_getBytesAsArray in SerialANE.o343936222#406#38#0(6@0"343936222#0#0#0#0#0"0(4@48""_FREDispatchStatusEventAsync", referenced from:343936222#444#51#0(6@0"343936222#0#0#0#0#0"0(13@27"_pollForData in SerialANE.o343936222#495#34#0(6@0"343936222#0#0#0#0#0"0(4@40""_FREAcquireByteArray", referenced from:343936222#529#43#0(6@0"343936222#0#0#0#0#0"0(13@29"_sendByteArray in SerialANE.o343936222#572#36#0(6@0"343936222#0#0#0#0#0"0(13@35"_getBytesAsByteArray in SerialANE.o343936222#608#42#0(6@0"343936222#0#0#0#0#0"0(4@41""_FRESetArrayElementAt", referenced from:343936222#650#44#0(6@0"343936222#0#0#0#0#0"0(13@31"_getBytesAsArray in SerialANE.o343936222#694#38#0(6@0"343936222#0#0#0#0#0"0(4@40""_FREReleaseByteArray", referenced from:343936222#732#43#0(6@0"343936222#0#0#0#0#0"0(13@29"_sendByteArray in SerialANE.o343936222#775#36#0(6@0"343936222#0#0#0#0#0"0(13@35"_getBytesAsByteArray in SerialANE.o343936222#811#42#0(6@0"343936222#0#0#0#0#0"0(4@43""_FRENewObjectFromUint32", referenced from:343936222#853#46#0(6@0"343936222#0#0#0#0#0"0(13@23"_getByte in SerialANE.o343936222#899#30#0(6@0"343936222#0#0#0#0#0"0(4@41""_FRENewObjectFromBool", referenced from:343936222#929#44#0(6@0"343936222#0#0#0#0#0"0(13@25"_setupPort in SerialANE.o343936222#973#32#0(6@0"343936222#0#0#0#0#0"0(13@27"_isSupported in SerialANE.o343936222#1005#34#0(6@0"343936222#0#0#0#0#0"0(13@29"_sendByteArray in SerialANE.o343936222#1039#36#0(6@0"343936222#0#0#0#0#0"0(13@26"_sendString in SerialANE.o343936222#1075#33#0(6@0"343936222#0#0#0#0#0"0(13@24"_sendByte in SerialANE.o343936222#1108#31#0(6@0"343936222#0#0#0#0#0"0(13@35"_getBytesAsByteArray in SerialANE.o343936222#1139#42#0(6@0"343936222#0#0#0#0#0"0(4@42""_FRENewObjectFromInt32", referenced from:343936222#1181#45#0(6@0"343936222#0#0#0#0#0"0(13@33"_getAvailableBytes in SerialANE.o343936222#1226#40#0(6@0"343936222#0#0#0#0#0"0(4@40""_FREGetObjectAsInt32", referenced from:343936222#1266#43#0(6@0"343936222#0#0#0#0#0"0(13@25"_setupPort in SerialANE.o343936222#1309#32#0(6@0"343936222#0#0#0#0#0"0(13@25"_setupPort in SerialANE.o343936222#1341#32#0(6@0"343936222#0#0#0#0#0"0(4@39""_FREGetObjectAsUTF8", referenced from:343936222#1373#42#0(6@0"343936222#0#0#0#0#0"0(13@26"_sendString in SerialANE.o343936222#1415#33#0(6@0"343936222#0#0#0#0#0"0(4@33""_FRENewObject", referenced from:343936222#1448#36#0(6@0"343936222#0#0#0#0#0"0(13@31"_getBytesAsArray in SerialANE.o343936222#1484#38#0(6@0"343936222#0#0#0#0#0"0(13@19"Symbol(s) not found343936222#1522#24#0(6@0"343936222#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status343936222#1546#36#0(6@0"343936222#0#0#0#0#0"0(0#0#0"4300885448#832"    cd /Users/quetwo/Documents/SerialANE    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/quetwo/Documents/SerialANE/build/Release -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -filelist /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE.LinkFileList -install_name /Users/quetwo/Library/Frameworks/SerialANE.framework/Versions/A/SerialANE -mmacosx-version-min=10.6 -framework Cocoa -framework "Adobe AIR" -single_module -compatibility_version 1 -current_version 1 -o /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/Objects-normal/x86_64/SerialANE1#
-
-CProcessInfoPlistFile /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/Info.plist Info.plist
-s344098709.390457
-e344098709.394233
-r1
-xProcessInfoPlistFile
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/Info.plist
-xInfo.plist
-lSLF07#2@18"Process Info.plist344098709#344098709#0(0"0(0#0#44"/Users/quetwo/Documents/SerialANE/Info.plist4300885448#222"    cd /Users/quetwo/Documents/SerialANE    builtin-infoPlistUtility Info.plist -expandbuildsettings -platform macosx -o /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/A/Resources/Info.plist0#
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-acxozgsgcarlqfbagytukuxdigbu/SerialANE_Prefix.pch.pth SerialANE_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.analyzer
-s343941502.143445
-e343941502.217327
-r1
-xProcessPCH
-x/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-acxozgsgcarlqfbagytukuxdigbu/SerialANE_Prefix.pch.pth
-xSerialANE_Prefix.pch
-xnormal
-xi386
-xc
-xcom.apple.compilers.llvm.clang.1_0.analyzer
-lSLF07#2@31"Precompile SerialANE_Prefix.pch343941502#343941502#0(0"0(0#0#54"/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch4300885448#1493"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -c /Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch -o /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-acxozgsgcarlqfbagytukuxdigbu/SerialANE_Prefix.pch.pth0#
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-azybmrckhntbptdfrijbpnvkspys/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
-s344065292.030153
-e344065292.228416
-r1
-xProcessPCH
-x/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-azybmrckhntbptdfrijbpnvkspys/SerialANE_Prefix.pch.gch
-xSerialANE_Prefix.pch
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@31"Precompile SerialANE_Prefix.pch344065292#344065292#0(0"0(0#0#54"/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch4300885448#1457"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -c /Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch -o /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-azybmrckhntbptdfrijbpnvkspys/SerialANE_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-bhrattglsybfrxfrsvfbukrciter/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dhouvpiemftqkdekcxslwwtyliyh/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dpvpozlpclhkprhcnnvafnwurwxr/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal x86_64 c com.apple.compilers.gcc.4_2
-s343936221.200926
-e343936221.430145
-r1
-xProcessPCH
-x/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dpvpozlpclhkprhcnnvafnwurwxr/SerialANE_Prefix.pch.gch
-xSerialANE_Prefix.pch
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@31"Precompile SerialANE_Prefix.pch343936221#343936221#0(0"0(0#0#54"/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch4300885448#1461"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/x86_64 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -c /Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch -o /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dpvpozlpclhkprhcnnvafnwurwxr/SerialANE_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dyugocxszpqrybdirpjfbtdlmwvr/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
-s343936221.201833
-e343936221.357376
-r1
-xProcessPCH
-x/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dyugocxszpqrybdirpjfbtdlmwvr/SerialANE_Prefix.pch.gch
-xSerialANE_Prefix.pch
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@31"Precompile SerialANE_Prefix.pch343936221#343936221#0(0"0(0#0#54"/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch4300885448#1457"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -c /Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch -o /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-dyugocxszpqrybdirpjfbtdlmwvr/SerialANE_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-efwkvrqnotblfofunkpclmcbhvpf/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
-s344067309.033484
-e344067309.098789
-r1
-xProcessPCH
-x/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-efwkvrqnotblfofunkpclmcbhvpf/SerialANE_Prefix.pch.gch
-xSerialANE_Prefix.pch
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@31"Precompile SerialANE_Prefix.pch344067309#344067309#0(0"0(0#0#54"/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch4300885448#1477"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -fvisibility=hidden -c /Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch -o /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-efwkvrqnotblfofunkpclmcbhvpf/SerialANE_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-emtvsdkqpeqabhalxjndvkytvfbk/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal ppc c com.apple.compilers.gcc.4_2
-s343936365.774815
-e343936365.881519
-r1
-xProcessPCH
-x/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-emtvsdkqpeqabhalxjndvkytvfbk/SerialANE_Prefix.pch.gch
-xSerialANE_Prefix.pch
-xnormal
-xppc
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@31"Precompile SerialANE_Prefix.pch343936365#343936365#0(0"0(0#0#54"/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch4300885448#1452"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mtune=G5 -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/ppc -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -c /Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch -o /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-emtvsdkqpeqabhalxjndvkytvfbk/SerialANE_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-erwcteucreqrjcanmvlakgtsjeou/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal ppc c com.apple.compilers.gcc.4_2
-s343936221.357498
-e343936222.093814
-r1
-xProcessPCH
-x/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-erwcteucreqrjcanmvlakgtsjeou/SerialANE_Prefix.pch.gch
-xSerialANE_Prefix.pch
-xnormal
-xppc
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@31"Precompile SerialANE_Prefix.pch343936221#343936222#0(0"0(0#0#54"/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch4300885448#1452"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/ppc -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -c /Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch -o /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-erwcteucreqrjcanmvlakgtsjeou/SerialANE_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-fvkesaijbplkszeeiebzxljiwsrr/SerialANE_Prefix.pch.gch SerialANE_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
-s344098709.495947
-e344098709.569655
-r1
-xProcessPCH
-x/var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-fvkesaijbplkszeeiebzxljiwsrr/SerialANE_Prefix.pch.gch
-xSerialANE_Prefix.pch
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@31"Precompile SerialANE_Prefix.pch344098709#344098709#0(0"0(0#0#54"/Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch4300885448#1496"    cd /Users/quetwo/Documents/SerialANE    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-generated-files.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-own-target-headers.hmap -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-all-target-headers.hmap -iquote /Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/SerialANE-project-headers.hmap -F/Users/quetwo/Documents/SerialANE/build/Release "-F/Applications/Adobe Flash Builder 4.6/sdks/4.6.0/runtimes/air/mac" -I/Users/quetwo/Documents/SerialANE/build/Release/include -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources/i386 -I/Users/quetwo/Documents/SerialANE/build/SerialANE.build/Release/SerialANE.framework.build/DerivedSources -fvisibility=hidden -c /Users/quetwo/Documents/SerialANE/SerialANE_Prefix.pch -o /var/folders/hs/hsVxKgWcHnueaHLKB4Hsz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SerialANE_Prefix-fvkesaijbplkszeeiebzxljiwsrr/SerialANE_Prefix.pch.gch0#
-
-CSymLink /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Resources Versions/Current/Resources
-s344098709.383118
-e344098709.387261
-r1
-xSymLink
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Resources
-xVersions/Current/Resources
-lSLF07#2@85"Process /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Resources344098709#344098709#0(0"0(0#0#0"4300885448#162"    cd /Users/quetwo/Documents/SerialANE    /bin/ln -sf Versions/Current/Resources /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Resources0#
-
-CSymLink /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/SerialANE Versions/Current/SerialANE
-s344098709.387338
-e344098709.390363
-r1
-xSymLink
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/SerialANE
-xVersions/Current/SerialANE
-lSLF07#2@85"Process /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/SerialANE344098709#344098709#0(0"0(0#0#0"4300885448#162"    cd /Users/quetwo/Documents/SerialANE    /bin/ln -sf Versions/Current/SerialANE /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/SerialANE0#
-
-CSymLink /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/Current A
-s344098709.382188
-e344098709.387127
-r1
-xSymLink
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/Current
-xA
-lSLF07#2@92"Process /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/Current344098709#344098709#0(0"0(0#0#0"4300885448#144"    cd /Users/quetwo/Documents/SerialANE    /bin/ln -sf A /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework/Versions/Current0#
-
-CTouch /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework
-s344098709.824859
-e344098709.827699
-r1
-xTouch
-x/Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework
-lSLF07#2@73"Touch /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework344098709#344098709#0(0"0(0#0#0"4300885448#131"    cd /Users/quetwo/Documents/SerialANE    /usr/bin/touch -c /Users/quetwo/Documents/SerialANE/build/Release/SerialANE.framework0#
-
