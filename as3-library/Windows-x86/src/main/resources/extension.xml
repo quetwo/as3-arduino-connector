@@ -3,7 +3,7 @@
 	<id>com.quetwo.Arduino.ArduinoConnector</id>
 	<name>Arduino Connector</name>
 	<copyright>This work is licensed under Mozilla Public License Version 1.1, Copyright 2011</copyright>
-	<versionNumber>0.9.7</versionNumber>
+	<versionNumber>0.9.9</versionNumber>
 	<platforms>
 	<platform name="Windows-x86">
 		<applicationDeployment>

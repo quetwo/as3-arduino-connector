@@ -41,27 +41,36 @@ package com.quetwo.Arduino
 		private var   _bytesAvailable:Number = 0;
 		
 		/**
+		 *
+		 * The ArduinoConnector constructor.  This will initilize the native code. 
 		 * 
-		 * The ArduinoConnector Constructor
-		 * This is where you set the communications port and other settings.  If there is an issue opening up the communications port the portOpen property
-		 * will be false.  You should check this before attempting to communicate with the Arduino.
+		 */
+		public function ArduinoConnector()
+		{
+			trace("[ArduinoConnector] Initalizing ANE...");
+			_ExtensionContext = ExtensionContext.createExtensionContext("com.quetwo.Arduino.ArduinoConnector", null);
+			_ExtensionContext.addEventListener(StatusEvent.STATUS, gotEvent);
+		}
+		
+		/**
+		 * 
+		 * This is where you set the communications port and baud rate.  If there is an issue opening up the communications port the portOpen property
+		 * will be false, and the function will return false.  You should check this before attempting to communicate with the Arduino.
 		 * 
 		 * @param comPort This is the communications port that the Arduino is connected to.  Call getComPorts() to get a valid list for this OS
 		 * @param baud    This is the baud rate that the Arduino is connected at. 57600 is the default for the Firmata sketch.
 		 * 
 		 */
-		public function ArduinoConnector(comPort:String, baud:Number=57600)
+		public function connect(comPort:String, baud:Number=57600):Boolean
 		{
 			var createComPortResult:Boolean;
-			
-			trace("[ArduinoConnector] Initalizing ANE...");
 			_comPort = convertCOMString(comPort);
 			_baud = baud;
-			_ExtensionContext = ExtensionContext.createExtensionContext("com.quetwo.Arduino.ArduinoConnector", null);
-			_ExtensionContext.addEventListener(StatusEvent.STATUS, gotEvent);
+			
 			createComPortResult = _ExtensionContext.call("setupPort", int(_comPort), int(_baud)) as Boolean;
 			trace("[ArduinoConnector] Opening COM port", _comPort.toString(), " success = ",createComPortResult);
 			_portOpen = createComPortResult;
+			return _portOpen;
 		}
 				
 		/**
