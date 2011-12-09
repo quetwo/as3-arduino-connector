@@ -145,13 +145,13 @@ FREObject getBytesAsByteArray(FREContext ctx, void* funcData, uint32_t argc, FRE
 
   pthread_mutex_lock( &safety);
     memcpy(incomingBytes.bytes,buffer,bufferSize);
+    FRENewObjectFromInt32(bufferSize, &result);
     bufferSize=0;
     sentEvent = 0;
   pthread_mutex_unlock( &safety);
 
   FREReleaseByteArray( &incomingBytes);
 
-  FRENewObjectFromBool(1, &result);
   return result;
 }
 
