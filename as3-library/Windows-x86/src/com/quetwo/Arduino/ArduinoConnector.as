@@ -68,7 +68,7 @@ package com.quetwo.Arduino
 			_baud = baud;
 			
 			createComPortResult = _ExtensionContext.call("setupPort", int(_comPort), int(_baud)) as Boolean;
-			trace("[ArduinoConnector] Opening COM port", _comPort.toString(), " success = ",createComPortResult);
+			trace("[ArduinoConnector] Opening COM port handle number", _comPort.toString(), "success = ",createComPortResult);
 			_portOpen = createComPortResult;
 			return _portOpen;
 		}
@@ -151,9 +151,13 @@ package com.quetwo.Arduino
 				return new ByteArray();
 			}
 			_bytesAvailable = 0;
+			
 			var ba:ByteArray = new ByteArray();
-			_ExtensionContext.call("getBytesAsByteArray", ba);
+			var baLength:Number = 0;
+			ba.length = 4097; // expand the byteArray to the max potential size
+			baLength = _ExtensionContext.call("getBytesAsByteArray", ba) as Number;
 			ba.position = 0;
+			ba.length = baLength; // tuncate the byteArray to what was in the buffer.
 			return ba;
 		}
 
@@ -255,8 +259,15 @@ package com.quetwo.Arduino
 		 */
 		public function dispose():void
 		{
+			if (!_portOpen)
+			{
+				trace("[ArduinoConnector] Error.  ANE Already in a disposed or failed state...");
+				return;
+			}
 			trace("[ArduinoConnector] Unloading ANE...");
+			_portOpen = false;
 			_ExtensionContext.dispose();
+			_ExtensionContext.removeEventListener(StatusEvent.STATUS, gotEvent);
 		}
 		
 		/**
