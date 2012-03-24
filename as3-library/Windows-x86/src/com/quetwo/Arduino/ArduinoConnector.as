@@ -17,6 +17,10 @@
 * Portions created by the Initial Developer are Copyright (C) 2011
 * the Initial Developer. All Rights Reserved.
 *
+* Updated 2012-03-15 - File Handlers updated so we can use > 16 ComPorts.  
+*     Because > 16 COM Ports is not valid with all Win OSs, the getComPorts() will not
+*     be updated to reflect this support.
+*
 */
 
 package com.quetwo.Arduino
@@ -48,8 +52,17 @@ package com.quetwo.Arduino
 		public function ArduinoConnector()
 		{
 			trace("[ArduinoConnector] Initalizing ANE...");
-			_ExtensionContext = ExtensionContext.createExtensionContext("com.quetwo.Arduino.ArduinoConnector", null);
-			_ExtensionContext.addEventListener(StatusEvent.STATUS, gotEvent);
+			try
+			{
+				_ExtensionContext = ExtensionContext.createExtensionContext("com.quetwo.Arduino.ArduinoConnector", null);
+				_ExtensionContext.addEventListener(StatusEvent.STATUS, gotEvent);				
+			}
+			catch (e:Error)
+			{
+				trace("[ArduinoConnector] Unable to load the .DLL!  Make sure libSerialANE.DLL and PthreadGC2.dll are available.");
+				trace("[ArduinoConnector] ANE Not loaded properly.  Future calls will fail.");
+			}
+
 		}
 		
 		/**
@@ -250,6 +263,17 @@ package com.quetwo.Arduino
 			// This is just stubbed out.  We always send out as soon as we are passed the data.
 		}
 		
+		/***
+		 * 
+		 * This function closes the COM port, clears the buffer, and allows you to call the connect function again.
+		 * 
+		 */
+		public function close():void
+		{
+			_ExtensionContext.call("closePort");
+			_portOpen = false;
+		}
+		
 		/**
 		 *
 		 * Call this function to close the COM port and clean up the ANE.  This MUST be called before the AIR application closes, 
@@ -259,15 +283,15 @@ package com.quetwo.Arduino
 		 */
 		public function dispose():void
 		{
-			if (!_portOpen)
+			if (!_ExtensionContext)
 			{
 				trace("[ArduinoConnector] Error.  ANE Already in a disposed or failed state...");
 				return;
 			}
 			trace("[ArduinoConnector] Unloading ANE...");
 			_portOpen = false;
-			_ExtensionContext.dispose();
 			_ExtensionContext.removeEventListener(StatusEvent.STATUS, gotEvent);
+			_ExtensionContext.dispose();
 		}
 		
 		/**
@@ -336,11 +360,11 @@ package com.quetwo.Arduino
 		}
 		
 		// Find the COM port as a string that people know, and turn it into the file handler number
-		// COM1 =0,  COM3 = 2, etc.
+		// COM1 =1,  COM3 = 3, etc.
 		private function convertCOMString(comString:String):Number
 		{
 			var myPort:Number = Number(comString.slice(3));
-			return --myPort;
+			return myPort;
 		}
 		
 	}
