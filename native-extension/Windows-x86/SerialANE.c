@@ -346,13 +346,13 @@ void contextFinalizer(FREContext ctx)
   return;
 }
 
-void SerialANE_initializer(void** extData, FREContextInitializer* ctxInitializer, FREContextFinalizer* ctxFinalizer)
+void SerialANEinitializer(void** extData, FREContextInitializer* ctxInitializer, FREContextFinalizer* ctxFinalizer)
 {
   *ctxInitializer = &contextInitializer;
   *ctxFinalizer = &contextFinalizer;
 }
 
-void SerialANE_finalizer(void* extData)
+void SerialANEfinalizer(void* extData)
 {
   FREContext nullCTX;
   nullCTX = 0; //We want to point to the current contex.

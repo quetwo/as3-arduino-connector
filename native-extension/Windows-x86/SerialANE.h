@@ -24,8 +24,8 @@
 
 #include "FlashRuntimeExtensions.h"    // import the Adobe headers for the ANE
 
-  __declspec(dllexport) void SerialANE_initializer(void** extData, FREContextInitializer* ctxInitializer, FREContextFinalizer* ctxFinalizer);
-  __declspec(dllexport) void SerialANE_finalizer(void* extData);
+  __declspec(dllexport) void SerialANEinitializer(void** extData, FREContextInitializer* ctxInitializer, FREContextFinalizer* ctxFinalizer);
+  __declspec(dllexport) void SerialANEfinalizer(void* extData);
 
 
 #endif /* SERIALANE_H_ */
