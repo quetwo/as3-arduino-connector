@@ -17,6 +17,8 @@
 * Portions created by the Initial Developer are Copyright (C) 2011
 * the Initial Developer. All Rights Reserved.
 *
+* Updated 2012-03-15  -  Included updates to fix issues 9,10,11.
+*
 */
 
 package com.quetwo.Arduino
