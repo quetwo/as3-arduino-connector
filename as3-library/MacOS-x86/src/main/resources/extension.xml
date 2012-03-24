@@ -8,15 +8,15 @@
 	<platform name="Windows-x86">
 		<applicationDeployment>
 			<nativeLibrary>libSerialANE.dll</nativeLibrary>
-			<initializer>SerialANE_initializer</initializer>
-			<finalizer>SerialANE_finalizer</finalizer>
+			<initializer>SerialANEinitializer</initializer>
+			<finalizer>SerialANEfinalizer</finalizer>
 		</applicationDeployment>
 	</platform>
 	<platform name="MacOS-x86">
 		<applicationDeployment>
 			<nativeLibrary>SerialANE.framework</nativeLibrary>
-			<initializer>SerialANE_initializer</initializer>
-			<finalizer>SerialANE_finalizer</finalizer>
+			<initializer>SerialANEinitializer</initializer>
+			<finalizer>SerialANEfinalizer</finalizer>
 		</applicationDeployment>
 	</platform>
 	</platforms>
