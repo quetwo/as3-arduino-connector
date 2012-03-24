@@ -50,8 +50,16 @@ package com.quetwo.Arduino
 		public function ArduinoConnector()
 		{	
 			trace("[ArduinoConnector] Initalizing ANE...");
-			_ExtensionContext = ExtensionContext.createExtensionContext("com.quetwo.Arduino.ArduinoConnector", null);
-			_ExtensionContext.addEventListener(StatusEvent.STATUS, gotEvent);
+			try
+			{
+				_ExtensionContext = ExtensionContext.createExtensionContext("com.quetwo.Arduino.ArduinoConnector", null);
+				_ExtensionContext.addEventListener(StatusEvent.STATUS, gotEvent);				
+			}
+			catch (e:Error)
+			{
+				trace("[ArduinoConnector] Unable to load the .DLL!  Make sure libSerialANE.DLL and PthreadGC2.dll are available.");
+				trace("[ArduinoConnector] ANE Not loaded properly.  Future calls will fail.");
+			}
 		}
 		
 		/**
@@ -251,6 +259,17 @@ package com.quetwo.Arduino
 			// This is just stubbed out.  We always send out as soon as we are passed the data.
 		}
 		
+		/***
+		 *
+		 * This function closes the COM port, clears the buffer, and allows you to call the connect function again.
+		 *
+		 */
+		public function close():void
+		{
+			_ExtensionContext.call("closePort");
+			_portOpen = false;
+		}
+		
 		/**
 		 *
 		 * Call this function to close the COM port and clean up the ANE.  This MUST be called before the AIR application closes, 
@@ -260,15 +279,15 @@ package com.quetwo.Arduino
 		 */
 		public function dispose():void
 		{
-			if (!_portOpen)
+			if (!_ExtensionContext)
 			{
 				trace("[ArduinoConnector] Error.  ANE Already in a disposed or failed state...");
 				return;
 			}
 			trace("[ArduinoConnector] Unloading ANE...");
 			_portOpen = false;
-			_ExtensionContext.dispose();
 			_ExtensionContext.removeEventListener(StatusEvent.STATUS, gotEvent);
+			_ExtensionContext.dispose();
 		}
 		
 		/**
