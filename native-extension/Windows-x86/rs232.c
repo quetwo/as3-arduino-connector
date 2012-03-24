@@ -29,32 +29,28 @@
 ***************************************************************************
 
 Updated 2011-11-25 by Nicholas Kwiatkowski to allow compatibility with MacOSX 10.4+
+Updated 2012-03-15 by Nicholas Kwiatkowski, with contributions from blanchard.glen.  Allows COM Ports > 16
 
 */
-
-
 
 #include "rs232.h"
 
 #ifdef _WIN32
+HANDLE Cport[32];
 
-HANDLE Cport[16];
-
-char comports[16][10]={"\\\\.\\COM1",  "\\\\.\\COM2",  "\\\\.\\COM3",  "\\\\.\\COM4",
-                       "\\\\.\\COM5",  "\\\\.\\COM6",  "\\\\.\\COM7",  "\\\\.\\COM8",
-                       "\\\\.\\COM9",  "\\\\.\\COM10", "\\\\.\\COM11", "\\\\.\\COM12",
-                       "\\\\.\\COM13", "\\\\.\\COM14", "\\\\.\\COM15", "\\\\.\\COM16"};
+char comport[11];
 
 char baudr[64];
 
-
 int OpenComport(int comport_number, int baudrate)
 {
-  if((comport_number>15)||(comport_number<0))
+  if((comport_number>999)||(comport_number<0))
   {
     printf("illegal comport number\n");
     return(1);
   }
+
+  sprintf(comport, "\\\\.\\COM%i", comport_number);
 
   switch(baudrate)
   {
@@ -89,7 +85,7 @@ int OpenComport(int comport_number, int baudrate)
                    break;
   }
 
-  Cport[comport_number] = CreateFileA(comports[comport_number],
+  Cport[comport_number] = CreateFileA(comport,
                       GENERIC_READ|GENERIC_WRITE,
                       0,                          /* no share  */
                       NULL,                       /* no security */

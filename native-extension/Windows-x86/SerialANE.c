@@ -274,9 +274,19 @@ FREObject setupPort(FREContext ctx, void* funcData, uint32_t argc, FREObject arg
   return result;
 }
 
+FREObject closePort(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
+{
+  FREObject result;
+
+  CloseComport(comPort);
+  FRENewObjectFromBool(1, &result);
+
+  return result;
+}
+
 void contextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, uint32_t* numFunctions, const FRENamedFunction** functions)
 {
-  *numFunctions = 10;
+  *numFunctions = 11;
   FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * (*numFunctions));
 
   func[0].name = (const uint8_t*) "isSupported";
@@ -319,6 +329,10 @@ void contextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx, u
   func[9].functionData = NULL;
   func[9].function = &getAvailableBytes;
 
+  func[10].name = (const uint8_t*) "closePort";
+  func[10].functionData = NULL;
+  func[10].function = &closePort;
+
   *functions = func;
 
   dllContext = ctx;
@@ -332,14 +346,17 @@ void contextFinalizer(FREContext ctx)
   return;
 }
 
-void initializer(void** extData, FREContextInitializer* ctxInitializer, FREContextFinalizer* ctxFinalizer)
+void SerialANE_initializer(void** extData, FREContextInitializer* ctxInitializer, FREContextFinalizer* ctxFinalizer)
 {
   *ctxInitializer = &contextInitializer;
   *ctxFinalizer = &contextFinalizer;
 }
 
-void finalizer(void* extData)
+void SerialANE_finalizer(void* extData)
 {
+  FREContext nullCTX;
+  nullCTX = 0; //We want to point to the current contex.
+  contextFinalizer(nullCTX);
   return;
 }
 
