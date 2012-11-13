@@ -83,8 +83,8 @@ void *pollForData()
 
       if ((sentEvent == 0) && (((prevCollection == 0) && (bufferSize > 0)) || (bufferSize > 1024)))
         {
-          FREDispatchStatusEventAsync(dllContext, (uint8_t*) "bufferHasData", (const uint8_t*) "INFO");
           sentEvent = 1;
+          FREDispatchStatusEventAsync(dllContext, (uint8_t*) "bufferHasData", (const uint8_t*) "INFO");
         }
     }
     return NULL;

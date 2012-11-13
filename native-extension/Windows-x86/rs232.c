@@ -78,6 +78,8 @@ int OpenComport(int comport_number, int baudrate)
                    break;
     case  128000 : strcpy(baudr, "baud=128000 data=8 parity=N stop=1");
                    break;
+    case  230400 : strcpy(baudr, "baud=230400 data=8 parity=N stop=1");
+                   break;
     case  256000 : strcpy(baudr, "baud=256000 data=8 parity=N stop=1");
                    break;
     default      : printf("invalid baudrate\n");
@@ -256,6 +258,8 @@ int OpenComport(int comport_number, int baudrate)
     case  115200 : baudr = B115200;
                    break;
     case  230400 : baudr = B230400;
+                   break;
+    case  256000 : baudr = B256000;
                    break;
     default      : printf("invalid baudrate\n");
                    return(1);
