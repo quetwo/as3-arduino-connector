@@ -30,6 +30,8 @@
 
 Updated 2011-11-25 by Nicholas Kwiatkowski to allow compatibility with MacOSX 10.4+
 Updated 2012-03-15 by Nicholas Kwiatkowski, with contributions from blanchard.glen.  Allows COM Ports > 16
+Updated 2013-01-04 by Ellis Elkins on behalf of DirectAthletics to add the ability
+ to enable DTR Control when port opened from outside this class.
 
 */
 
@@ -42,7 +44,7 @@ char comport[11];
 
 char baudr[64];
 
-int OpenComport(int comport_number, int baudrate)
+int OpenComport(int comport_number, int baudrate, int useDtrControl)
 {
   if((comport_number>999)||(comport_number<0))
   {
@@ -78,8 +80,6 @@ int OpenComport(int comport_number, int baudrate)
                    break;
     case  128000 : strcpy(baudr, "baud=128000 data=8 parity=N stop=1");
                    break;
-    case  230400 : strcpy(baudr, "baud=230400 data=8 parity=N stop=1");
-                   break;
     case  256000 : strcpy(baudr, "baud=256000 data=8 parity=N stop=1");
                    break;
     default      : printf("invalid baudrate\n");
@@ -104,6 +104,9 @@ int OpenComport(int comport_number, int baudrate)
   DCB port_settings;
   memset(&port_settings, 0, sizeof(port_settings));  /* clear the new struct  */
   port_settings.DCBlength = sizeof(port_settings);
+
+  //use DTR control if specified. Disabled by default.
+  port_settings.fDtrControl = useDtrControl ? DTR_CONTROL_ENABLE : DTR_CONTROL_DISABLE;
 
   if(!BuildCommDCBA(baudr, &port_settings))
   {
@@ -211,7 +214,7 @@ char comports[22][13]={"/dev/ttyS0","/dev/ttyS1","/dev/ttyS2","/dev/ttyS3","/dev
                        "/dev/ttyUSB1","/dev/ttyUSB2","/dev/ttyUSB3","/dev/ttyUSB4","/dev/ttyUSB5"};
 
 
-int OpenComport(int comport_number, int baudrate)
+int OpenComport(int comport_number, int baudrate, int useDtrControl)
 {
   int baudr;
 
@@ -259,8 +262,6 @@ int OpenComport(int comport_number, int baudrate)
                    break;
     case  230400 : baudr = B230400;
                    break;
-    case  256000 : baudr = B256000;
-                   break;
     default      : printf("invalid baudrate\n");
                    return(1);
                    break;
@@ -272,6 +273,12 @@ int OpenComport(int comport_number, int baudrate)
     perror("unable to open comport ");
     return(1);
   }
+  
+  //use DTR control if specified. Disabled by default.
+  int bits ;
+  ioctl( Cport[comport_number], TIOCMGET, &bits ) ;
+  if ( useDtrControl ) bits |= TIOCM_DTR ; else bits &= ~( TIOCM_DTR ) ;
+  ioctl( Cport[comport_number], TIOCMSET, &bits ) ;
 
   error = tcgetattr(Cport[comport_number], old_port_settings + comport_number);
   if(error==-1)

@@ -17,7 +17,13 @@
 * Portions created by the Initial Developer are Copyright (C) 2011
 * the Initial Developer. All Rights Reserved.
 *
+* The Assistant Developer is Ellis Elkins on behalf of DirectAthletics.
+* Portions created by the Assistant Developer are Copyright (C) 2013
+* DirectAthletics. All Rights Reserved.
+*
 * Updated 2012-03-15  -  Included updates to fix issues 9,10,11.
+* Updated 2012-01-04  -  Added the ability to enable DTR Control when port is opened.
+*     Also added the reinitiate function to allow reloading of the native code.
 *
 */
 
@@ -40,17 +46,28 @@ package com.quetwo.Arduino
 		private var   _ExtensionContext:ExtensionContext;
 		private var   _comPort:String;
 		private var   _baud:Number;
+		/** Whether to enable DTR Control for the serial connection. */
+		private var   _useDtrControl:Boolean;
 		private var   _portOpen:Boolean = false;
 		private var   _bytesAvailable:Number = 0;
 		
 
 		/**
 		 *
-		 * The ArduinoConnector constructor.  This will initilize the native code. 
+		 * The ArduinoConnector constructor. Initiates native code.
 		 * 
 		 */
 		public function ArduinoConnector()
-		{	
+		{
+			initiate();
+		}
+		
+		/**
+		 * This will initilize the native code.
+		 * 
+		 */		
+		protected function initiate():void
+		{
 			trace("[ArduinoConnector] Initalizing ANE...");
 			try
 			{
@@ -71,14 +88,17 @@ package com.quetwo.Arduino
 		 * 
 		 * @param comPort This is the communications port that the Arduino is connected to.  Call getComPorts() to get a valid list for this OS
 		 * @param baud    This is the baud rate that the Arduino is connected at. 57600 is the default for the Firmata sketch.
+		 * @param useDtrControl    Whether to enable DTR Control for the serial connection.
 		 * 
 		 */
-		public function connect(comPort:String, baud:Number=57600):Boolean
+		public function connect(comPort:String, baud:Number=57600, useDtrControl:Boolean = false):Boolean
 		{
 			var createComPortResult:Boolean;
 			_comPort = comPort;
 			_baud = baud;
-			createComPortResult = _ExtensionContext.call("setupPort", _comPort, _baud) as Boolean;
+			_useDtrControl = useDtrControl;
+			
+			createComPortResult = _ExtensionContext.call("setupPort", _comPort, _baud, (_useDtrControl ? 1 : 0)) as Boolean;
 			trace("[ArduinoConnector] Opening COM port handle number", _comPort.toString(), "success = ",createComPortResult);
 			_portOpen = createComPortResult;
 			return createComPortResult;
@@ -273,6 +293,16 @@ package com.quetwo.Arduino
 		}
 		
 		/**
+		 * Unloads and reloads the native code.
+		 * 
+		 */		
+		public function reinitiate():void
+		{
+			dispose();
+			initiate();
+		}
+		
+		/**
 		 *
 		 * Call this function to close the COM port and clean up the ANE.  This MUST be called before the AIR application closes, 
 		 * or the Operating System may throw an error.  If the COM port is not cleaned up properly, it may be locked from use of
@@ -329,28 +359,54 @@ package com.quetwo.Arduino
 		 *
 		 * This function will return an array of valid COM ports for this operating system.  It will not necessarly provide valid
 		 * COM ports for this machine, but what is valid for the OS in general.
-		 *  
+		 * 
+		 * @param includeAllSerial Include all serial ports. (For Mac)
+		 * @param includeAll Include all ports. (For Mac)
+		 * 
 		 * @return An array of Strings containing the COM port names.
 		 * 
 		 */
-		public function getComPorts():Array
+		public function getComPorts(includeAllSerial:Boolean = false, includeAll:Boolean = false):Array
 		{
 			var validComPorts:Array = new Array();
 
 			var allDevDevices:Array;
 			var devDirectory:File = new File("/dev/");
+			var searchRegex:RegExp;
+			//if all serial ports allowed
+			if(includeAllSerial)
+				//get any ports that start with tty. or cu.
+				searchRegex = /\/dev\/(tty|cu)\./;
+			//otherwise we should just return the arduino ports or all ports
+			else
+				//so store the arduino port regex, which matches any port that starts with tty.usb
+				searchRegex = /\/dev\/tty\.usb/;
 			
+			//get all the ports
 			allDevDevices = devDirectory.getDirectoryListing();
 			
+			//loop through the ports
 			for each (var i:File in allDevDevices) 
 			{
-				if (i.nativePath.search("/dev/tty.usb") > -1)
+				//if we should include all ports or if the native path has a match for our regex
+				if (includeAll || i.nativePath.match(searchRegex))
 				{
+					//save this port reference
 					validComPorts.push(i.nativePath);
 				}
 			}
 			
+			//return requested ports
 			return validComPorts;
+		}
+		
+		/**
+		 * Find the COM port as a string that people know, and turn it into the file handler number
+		 * COM1 =1,  COM3 = 3, etc. Only for Windows.
+		 */
+		private function convertCOMString(comString:String):Number
+		{
+			return NaN;
 		}
 		
 	}

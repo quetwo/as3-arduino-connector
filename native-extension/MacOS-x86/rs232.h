@@ -59,7 +59,7 @@ extern "C" {
 
 #endif
 
-int OpenComport(unsigned char *, int, int);
+int OpenComport(unsigned char *, int, int, int);
 int PollComport(int, unsigned char *, int);
 int SendByte(int, unsigned char);
 int SendBuf(int, unsigned char *, int);

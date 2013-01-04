@@ -17,6 +17,10 @@
  * Portions created by the Initial Developer are Copyright (C) 2011
  * the Initial Developer. All Rights Reserved.
  *
+ * The Assistant Developer is Ellis Elkins on behalf of DirectAthletics.
+ * Portions created by the Assistant Developer are Copyright (C) 2013
+ * DirectAthletics. All Rights Reserved.
+ *
  */
 
 #include "SerialANE.h"
@@ -253,13 +257,15 @@ FREObject setupPort(FREContext ctx, void* funcData, uint32_t argc, FREObject arg
 {
   FREObject result;
   int comPortError = 0;
+  int useDtrControl;
 
   FREGetObjectAsInt32(argv[0], &comPort);
   FREGetObjectAsInt32(argv[1], &baud);
+  FREGetObjectAsInt32(argv[2], &useDtrControl);
 
   bufferSize = 0;
 
-  comPortError = OpenComport(comPort,baud);
+  comPortError = OpenComport(comPort,baud, useDtrControl);
   if (comPortError == 0)
     {
       multiplatformSleep(100);

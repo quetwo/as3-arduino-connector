@@ -29,6 +29,8 @@
 ***************************************************************************
 
 Updated 2011-11-25 by Nicholas Kwiatkowski to allow compatibility with MacOSX 10.4+
+Updated 2013-01-04 by Ellis Elkins on behalf of DirectAthletics to add the ability
+ to enable DTR Control when port opened from outside this class.
 
 */
 
@@ -50,7 +52,7 @@ char comports[16][10]={"\\\\.\\COM1",  "\\\\.\\COM2",  "\\\\.\\COM3",  "\\\\.\\C
 char baudr[64];
 
 
-int OpenComport(int comport_number, int baudrate)
+int OpenComport(int comport_number, int baudrate, int useDtrControl)
 {
   if((comport_number>15)||(comport_number<0))
   {
@@ -108,6 +110,9 @@ int OpenComport(int comport_number, int baudrate)
   DCB port_settings;
   memset(&port_settings, 0, sizeof(port_settings));  /* clear the new struct  */
   port_settings.DCBlength = sizeof(port_settings);
+    
+  //use DTR control if specified. Disabled by default.
+  port_settings.fDtrControl = useDtrControl ? DTR_CONTROL_ENABLE : DTR_CONTROL_DISABLE;
 
   if(!BuildCommDCBA(baudr, &port_settings))
   {
@@ -211,7 +216,7 @@ int Cport[22],
 struct termios new_port_settings,
        old_port_settings[22];
 
-int OpenComport(unsigned char *comPort, int baudrate, int comport_number)
+int OpenComport(unsigned char *comPort, int baudrate, int comport_number, int useDtrControl)
 {
   int baudr;
 
@@ -257,13 +262,19 @@ int OpenComport(unsigned char *comPort, int baudrate, int comport_number)
                    return(1);
                    break;
   }
-	
+  
   Cport[comport_number] = open((char *) comPort, O_RDWR | O_NOCTTY | O_NDELAY);
   if(Cport[comport_number]==-1)
   {
     perror("unable to open comport ");
     return(1);
   }
+  
+  //use DTR control if specified. Disabled by default.
+  int bits ;
+  ioctl( Cport[comport_number], TIOCMGET, &bits ) ;
+  if ( useDtrControl ) bits |= TIOCM_DTR ; else bits &= ~( TIOCM_DTR ) ;
+  ioctl( Cport[comport_number], TIOCMSET, &bits ) ;
 
   error = tcgetattr(Cport[comport_number], old_port_settings + comport_number);
   if(error==-1)

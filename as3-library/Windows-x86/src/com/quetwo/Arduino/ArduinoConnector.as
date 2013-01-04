@@ -17,9 +17,15 @@
 * Portions created by the Initial Developer are Copyright (C) 2011
 * the Initial Developer. All Rights Reserved.
 *
+* The Assistant Developer is Ellis Elkins on behalf of DirectAthletics.
+* Portions created by the Assistant Developer are Copyright (C) 2013
+* DirectAthletics. All Rights Reserved.
+*
 * Updated 2012-03-15 - File Handlers updated so we can use > 16 ComPorts.  
 *     Because > 16 COM Ports is not valid with all Win OSs, the getComPorts() will not
 *     be updated to reflect this support.
+* Updated 2012-01-04  -  Added the ability to enable DTR Control when port is opened.
+*     Also added the reinitiate function to allow reloading of the native code.
 *
 */
 
@@ -41,15 +47,26 @@ package com.quetwo.Arduino
 		private var   _ExtensionContext:ExtensionContext;
 		private var   _comPort:Number;
 		private var   _baud:Number;
+		/** Whether to enable DTR Control for the serial connection. */		
+		private var   _useDtrControl:Boolean;
 		private var   _portOpen:Boolean = false;
 		private var   _bytesAvailable:Number = 0;
 		
 		/**
 		 *
-		 * The ArduinoConnector constructor.  This will initilize the native code. 
+		 * The ArduinoConnector constructor. Initiates native code.
 		 * 
 		 */
 		public function ArduinoConnector()
+		{
+			initiate();
+		}
+		
+		/**
+		 * This will initilize the native code.
+		 * 
+		 */	
+		protected function initiate():void
 		{
 			trace("[ArduinoConnector] Initalizing ANE...");
 			try
@@ -62,7 +79,6 @@ package com.quetwo.Arduino
 				trace("[ArduinoConnector] Unable to load the .DLL!  Make sure libSerialANE.DLL and PthreadGC2.dll are available.");
 				trace("[ArduinoConnector] ANE Not loaded properly.  Future calls will fail.");
 			}
-
 		}
 		
 		/**
@@ -70,17 +86,20 @@ package com.quetwo.Arduino
 		 * This is where you set the communications port and baud rate.  If there is an issue opening up the communications port the portOpen property
 		 * will be false, and the function will return false.  You should check this before attempting to communicate with the Arduino.
 		 * 
-		 * @param comPort This is the communications port that the Arduino is connected to.  Call getComPorts() to get a valid list for this OS
-		 * @param baud    This is the baud rate that the Arduino is connected at. 57600 is the default for the Firmata sketch.
+		 * @param comPort          This is the communications port that the Arduino is connected to.  Call getComPorts() to get a valid list for this OS
+		 * @param baud             This is the baud rate that the Arduino is connected at. 57600 is the default for the Firmata sketch.
+		 * @param useDtrControl    Whether to enable DTR Control for the serial connection.
 		 * 
 		 */
-		public function connect(comPort:String, baud:Number=57600):Boolean
+		public function connect(comPort:String, baud:Number=57600, useDtrControl:Boolean = false):Boolean
 		{
 			var createComPortResult:Boolean;
 			_comPort = convertCOMString(comPort);
 			_baud = baud;
+			_useDtrControl = useDtrControl;
 			
-			createComPortResult = _ExtensionContext.call("setupPort", int(_comPort), int(_baud)) as Boolean;
+			createComPortResult = _ExtensionContext.call("setupPort", int(_comPort), int(_baud),
+														 int(_useDtrControl ? 1 : 0)) as Boolean;
 			trace("[ArduinoConnector] Opening COM port handle number", _comPort.toString(), "success = ",createComPortResult);
 			_portOpen = createComPortResult;
 			return _portOpen;
@@ -275,6 +294,16 @@ package com.quetwo.Arduino
 		}
 		
 		/**
+		 * Unloads and reloads the native code.
+		 * 
+		 */	
+		public function reinitiate():void
+		{
+			dispose();
+			initiate();
+		}
+		
+		/**
 		 *
 		 * Call this function to close the COM port and clean up the ANE.  This MUST be called before the AIR application closes, 
 		 * or the Operating System may throw an error.  If the COM port is not cleaned up properly, it may be locked from use of
@@ -333,11 +362,14 @@ package com.quetwo.Arduino
 		 *
 		 * This function will return an array of valid COM ports for this operating system.  It will not necessarly provide valid
 		 * COM ports for this machine, but what is valid for the OS in general.
-		 *  
+		 * 
+		 * @param includeAllSerial Include all serial ports. (For Mac)
+		 * @param includeAll Include all ports. (For Mac)
+		 * 
 		 * @return An array of Strings containing the COM port names.
 		 * 
 		 */
-		public function getComPorts():Array
+		public function getComPorts(includeAllSerial:Boolean = false, includeAll:Boolean = false):Array
 		{
 			var validComPorts:Array = new Array();
 			validComPorts.push("COM1");
@@ -359,8 +391,10 @@ package com.quetwo.Arduino
 			return validComPorts;
 		}
 		
-		// Find the COM port as a string that people know, and turn it into the file handler number
-		// COM1 =1,  COM3 = 3, etc.
+		/**
+		 * Find the COM port as a string that people know, and turn it into the file handler number
+		 * COM1 =1,  COM3 = 3, etc. Only for Windows.
+		 */
 		private function convertCOMString(comString:String):Number
 		{
 			var myPort:Number = Number(comString.slice(3));

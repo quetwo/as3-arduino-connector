@@ -17,6 +17,10 @@
  * Portions created by the Initial Developer are Copyright (C) 2011
  * the Initial Developer. All Rights Reserved.
  *
+ * The Assistant Developer is Ellis Elkins on behalf of DirectAthletics.
+ * Portions created by the Assistant Developer are Copyright (C) 2013
+ * DirectAthletics. All Rights Reserved.
+ *
  */
 
 #include "SerialANE.h"
@@ -63,7 +67,6 @@ void *pollForData()
 
   unsigned char incomingBuffer[4096];
   int incomingBufferSize = 0;
-  uint8_t prevCollection = 0;
 
   while(1)
     {
@@ -76,14 +79,9 @@ void *pollForData()
           bufferSize = bufferSize + incomingBufferSize;
           buffer[bufferSize] = 0;
           pthread_mutex_unlock( &safety);
-          prevCollection = 1;
-        }
-      else
-        {
-          prevCollection = 0;
         }
 
-      if ((sentEvent == 0) && (((prevCollection == 0) && (bufferSize > 0)) || (bufferSize > 1024)))
+      if (sentEvent == 0 && bufferSize > 0)
         {
           sentEvent = 1;
           FREDispatchStatusEventAsync(dllContext, (uint8_t*) "bufferHasData", (const uint8_t*) "INFO");
@@ -257,15 +255,17 @@ FREObject setupPort(FREContext ctx, void* funcData, uint32_t argc, FREObject arg
 	int comPortError = 0;
 	uint comLength;
 	const unsigned char *localComPort;
+    int useDtrControl;
 	
 	FREGetObjectAsUTF8(argv[0], &comLength, &localComPort);
 	FREGetObjectAsInt32(argv[1], &baud);
+    FREGetObjectAsInt32(argv[2], &useDtrControl);
 	
 	memcpy(comPort, localComPort, comLength);
 	
 	bufferSize = 0;
 	
-	comPortError = OpenComport(comPort,baud, fileHandle);
+	comPortError = OpenComport(comPort,baud, fileHandle, useDtrControl);
 	
 	if (comPortError == 0)
     {
